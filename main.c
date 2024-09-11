@@ -28,7 +28,7 @@ int main()
             acertos++;
         }
         else{
-            printf("Erro na questao %d", i);
+            printf("Erro na questao %d\n", i);
         }
     }
     porcentagem = (float)acertos / (float)n;
