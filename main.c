@@ -3,7 +3,7 @@
 
 int main()
 {
-    int n, acertos;
+    int n, acertos = 0;
     char gabarito[100], resposta[100];
     float porcentagem;
 
@@ -27,10 +27,11 @@ int main()
         {
             acertos++;
         }
-        else{
+        else
+        {
             printf("Erro na questao %d\n", i);
         }
     }
-    porcentagem = (float)acertos / (float)n;
-    printf("Acertou %d questoes, com uma taxa de acerto de %.2f porcerto", acertos, porcentagem * 100);
+    porcentagem = ((float)acertos / (float)n) * 100;
+    printf("Acertou %d questoes, com uma taxa de acerto de %.2f porcerto", acertos, porcentagem);
 }
