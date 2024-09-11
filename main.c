@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include <string.h>
 
 int main()
 {
     int n, acertos;
-    char gabarito[n], resposta[n];
+    char gabarito[100], resposta[100];
     float porcentagem;
 
     printf("Quantas questoes? ");
