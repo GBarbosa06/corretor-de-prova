@@ -4,6 +4,7 @@ int main()
 {
     int n, acertos;
     char gabarito[n], resposta[n];
+    float porcentagem;
 
     printf("Quantas questoes? ");
     scanf("%d", &n);
@@ -12,10 +13,6 @@ int main()
     {
         printf("Digite a reposta da questao %d: ", i);
         scanf("%s", &resposta[i]);
-    }
-    for (int i = 0; i < n; i++)
-    {
-        printf("*");
     }
     
     for(int i = 1; i <= n; i++)
@@ -29,6 +26,10 @@ int main()
         {
             acertos++;
         }
+        else{
+            printf("Erro na questao %d", i);
+        }
     }
-    printf("Acertou %d questoes", acertos);
+    porcentagem = (float)acertos / (float)n;
+    printf("Acertou %d questoes, com uma taxa de acerto de %.2f porcerto", acertos, porcentagem * 100);
 }
